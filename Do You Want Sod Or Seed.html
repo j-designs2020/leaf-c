@@ -1,0 +1,136 @@
+<html>
+<head>
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+function storeValues(form)
+{
+sessionStorage.setItem("lawnsod",form.lawnsod.value);
+return true;
+}
+
+</script>
+
+
+<script type="text/javascript">
+function changevalue()
+{
+for(i=0;i<2;i++)
+{
+if(document.form1.lawnseed[i].checked)
+   document.form1.lawnsod.value = document.form1.lawnseed[i].value;
+}
+}
+</script> 
+
+
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | Do you want sod or seed?
+</title>
+</head>
+<center> 
+<br> 
+<br>
+<br>
+
+<img src="images/lawn.png" width="300">
+
+<!----------------------------------END HEADER------------------------------------------->
+
+
+<br> 
+
+
+
+<!--------------------------------------FORM-------------------------------------------------->
+<table width="300">
+<td>
+<center>
+<img src="images/gauge0percent.png" width="250">
+
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> Do you want sod or seed? </b>
+<br>
+<br> 
+<br>
+
+<form name="form1" method="post" action="Do You Want Lawn Irrigation.html" 
+onsubmit="
+return storeValues(this) || verify(this);">
+
+
+<fieldset>
+
+<label> Sod</label>
+<span><input type="radio" name="lawnseed" value="Sod" onclick="changevalue()" checked></span>  
+
+&nbsp &nbsp &nbsp
+
+<label> Seed</label>
+<span><input type="radio" name="lawnseed" value="Seed" onclick="changevalue()"></span>  
+
+<span> <input type="hidden" name="lawnsod" value=""> </span>
+
+
+</p>
+<br> 
+<br>
+
+<input type="image" src="images/ok.png" width="35" onclick="changevalue()" value="OK"> </center> </span> 
+ </td>
+</p>
+</label>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+
+
+</center>
+</body>
+</html> 

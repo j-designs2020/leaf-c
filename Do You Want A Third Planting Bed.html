@@ -1,0 +1,106 @@
+<html>
+<head>
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+function storeValues()
+{
+sessionStorage.setItem("bedwidthc",0);
+sessionStorage.setItem("bedlengthc",0);
+sessionStorage.setItem("beddepthc",0);
+sessionStorage.setItem("bedmaterialc",0);
+sessionStorage.setItem("howmanybedsc",0);
+return true;
+}
+
+
+</script>
+
+<!----------------------------------END SCRIPTS------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | Do you want a third style of planting bed? 
+</title>
+</head>
+<body> 
+<center> 
+<br> 
+<br>
+<br>
+
+<img src="images/plantingbeds.png" width="300">
+
+<!--------------------------------END HEADER--------------------------------------------->
+
+<br> 
+<br>
+
+
+<!-------------------------SELECTION TABLE DISPLAY------------------------------->
+
+<table width="300">
+<td>
+<center>
+<img src="images/gauge87.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> Do you want a third style of planting bed? </b>
+<br> 
+<br> 
+<br> 
+<br> 
+
+
+<a href="How Big Do You Want Your Third Planting Bed.html">
+<img src="images/yes.png" border="0"></a>  
+
+&nbsp &nbsp &nbsp &nbsp 
+
+<a href="State.html" onclick="storeValues() || verify(this);">
+<img src="images/no.png" border="0"></a>
+
+</p>
+
+<!-------------------------------END FORM-------------------------------------------------->
+
+
+
+
+
+
+</center>
+</body>
+</html>

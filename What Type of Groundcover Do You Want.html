@@ -1,0 +1,256 @@
+<html>
+<head>
+
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+
+function storeValues(form)
+{
+sessionStorage.setItem("bark",form.bark.value); 
+sessionStorage.setItem("rocks",form.rocks.value); 
+sessionStorage.setItem("sand",form.sand.value);
+sessionStorage.setItem("barkarea",form.barkarea.value);
+sessionStorage.setItem("rocksarea",form.rocksarea.value); 
+sessionStorage.setItem("sandarea",form.sandarea.value);
+sessionStorage.setItem("groundcover",form.groundcover.value);
+validateForm();
+return true;
+}
+
+</script>
+
+
+<script type="text/javascript">
+
+
+function EntryValue(x) 
+{
+var character=x.substring(0,1);
+var amount=x.charCodeAt(0);
+return amount;
+}
+
+
+
+function EntryCheck(y)
+{
+var typedPass=y.value;
+var typedLength=typedPass.length;
+var typedchar=y.value.charAt((typedLength)-1);
+var Numbered=EntryValue(typedchar);
+
+if (Numbered < 48 || Numbered > 57)
+{
+var entered = y.value.substring(0, (typedLength) -1);
+y.value = entered; 
+}
+return false; 
+}
+
+
+
+
+function validateForm()
+{
+var rc=true
+
+
+if 
+(!document.Form.bark.checked &&
+!document.Form.rocks.checked &&
+!document.Form.sand.checked &&
+document.Form.barkarea.value==0 &&
+document.Form.rocksarea.value==0 &&
+document.Form.sandarea.value==0
+)
+{
+alert("Please check a box to make your selection and enter the amount you'd like.")
+rc=false
+}
+
+
+if (document.Form.barkarea.value>0)
+{
+if (!document.Form.bark.checked) 
+{
+alert("Please check to indicate you'd like bark.")
+rc=false
+}
+}
+
+if (document.Form.bark.checked) 
+{
+if (!document.Form.barkarea.value)
+{
+alert("Please enter the amount of bark you'd like.")
+rc=false
+}
+}
+
+
+
+if (document.Form.rocksarea.value>0)
+{
+if (!document.Form.rocks.checked) 
+{
+alert("Please check to indicate you'd like rocks.")
+rc=false
+}
+}
+
+
+if (document.Form.rocks.checked) 
+{
+if (!document.Form.rocksarea.value)
+{
+alert("Please enter the amount of rocks you'd like.")
+rc=false
+}
+}
+
+
+
+if (document.Form.sandarea.value>0)
+{
+if (!document.Form.sand.checked) 
+{
+alert("Please check to indicate you'd like sand.")
+rc=false
+}
+}
+
+if (
+document.Form.sand.checked) 
+{
+if (!document.Form.sandarea.value)
+{
+alert("Please enter the amount of sand you'd like.")
+rc=false
+}
+}
+
+
+
+if (rc) 
+{
+
+window.location = "Do You Want Any Plants Or Trees.html";
+}
+return rc
+}
+
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What type of groundcover do you want?
+</title>
+</head>
+<body>
+<center> 
+<br> 
+<br>
+<br>
+<img src="images/groundcover.png" width="300">
+
+<!----------------------------------END HEADER------------------------------------------>
+
+
+<br> 
+
+
+
+
+
+
+<!--------------------------------------FORM--------------------------------------------------> 
+
+<table width="300">
+<td>
+<center>
+<img src="images/gauge37.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What type of groundcover do you want? </b>
+<br>
+<br>
+
+<form name="Form" method="post" action="javascript://" onsubmit="return storeValues(this);">
+<fieldset> <font size="2">
+
+
+
+Bark&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="images/okspacer.png" width="11">
+<input type="checkbox" name="bark"> <span><input type="text" name="barkarea" size="5" maxlength="4" value="" id="valuetext1" onKeyUp="javascript:EntryCheck(Form.valuetext1);"> <font size="1">square ft. </font></span> 
+ <br> 
+
+
+<span class="sprayersspace">Rocks &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/okspacer.png" width="5"><input type="checkbox" name="rocks"> <span><input type="text" name="rocksarea" size="5" maxlength="4" value="" id="valuetext2" onKeyUp="javascript:EntryCheck(Form.valuetext2);"> <font size="1">square ft. </font></span><br>
+
+
+
+<span class="sprayersspace">Sand &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/okspacer.png" width="2"></span><input type="checkbox" name="sand"> <span><input type="text" name="sandarea" size="5" maxlength="4" value="" id="valuetext3" onKeyUp="javascript:EntryCheck(Form.valuetext3);"> <font size="1">square ft. </font> </span> 
+
+
+<fieldset>
+<span> <input type="hidden" name="groundcover" value="1"> </span>
+</fieldset> 
+
+
+
+<br>
+<br>
+<input type="image" src="images/ok.png" width="35" value="OK"> </center> </span>  </tr> </td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+
+
+</center>
+</body>
+</html>

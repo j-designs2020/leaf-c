@@ -1,0 +1,111 @@
+<html>
+<head>
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+function storeValues()
+{
+sessionStorage.setItem("walkwidth",0);
+sessionStorage.setItem("walklength",0);
+sessionStorage.setItem("walkwaymaterial",0);
+sessionStorage.setItem("walkwidthb",0);
+sessionStorage.setItem("walklengthb",0);
+sessionStorage.setItem("walkwaymaterialb",0);
+sessionStorage.setItem("walkwidthc",0);
+sessionStorage.setItem("walklengthc",0);
+sessionStorage.setItem("walkwaymaterialc",0);
+return true;
+}
+
+
+
+
+</script>
+
+<!----------------------------------END SCRIPTS------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | Do you want a walkway? 
+</title>
+</head>
+<body> 
+<center> 
+<br> 
+ <br>
+<br>
+<img src="images/walkways.png" width="300">
+
+
+
+<!--------------------------------END HEADER--------------------------------------------->
+
+<br> 
+<br>
+
+
+<!--------------------------------------FORM-------------------------------------------------->
+<table width="300">
+<td>
+<center>
+<img src="images/gauge12.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> Do you want a walkway? </b>
+<br>
+<br> 
+<br> 
+<br>
+<a href="How Big Do You Want Your Walkway.html">
+<img src="images/yes.png" border="0"></a>  
+
+&nbsp &nbsp &nbsp &nbsp 
+
+<a href="Do You Want A Graded Mound Or Slope.html" onclick="storeValues()">
+<img src="images/no.png" border="0"></a>
+
+</p>
+
+<!-------------------------------END FORM-------------------------------------------------->
+
+
+
+
+
+</center>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+function storeValues(form)
+{
+sessionStorage.setItem("gradecond",form.gradecond.value);
+return true;
+}
+
+</script>
+<!----------------------------------END SCRIPTS------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What is the condition of the ground where you want your lawn? 
+</title>
+</head>
+<body> 
+<center> 
+<br> 
+<br>
+<br>
+
+
+<img src="images/lawn.png" width="300">
+
+
+<!--------------------------------END HEADER--------------------------------------------->
+
+<br> 
+
+
+
+
+
+<!--------------------------------------FORM-------------------------------------------------->
+<table width="300">
+<td>
+<center>
+<img src="images/gauge0percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What is the condition of the ground where you want your lawn? </b>
+<form name="walkway"  method="post" action="How Big Do You Want Your Lawn.html" onsubmit="return storeValues(this);">
+<br>  
+<fieldset>
+<select name="gradecond">
+<option value="Even"> Even</option>
+<option value="Some Bumps"> Some Bumps </option>
+<option value="Many Bumps"> Many Bumps </option>
+</select>     
+</p>
+<br> 
+<br> 
+<br>
+<span> <center> <input type="image" src="images/ok.png" width="35" value="OK"> </center> </span> 
+
+</td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!-------------------------------END FORM-------------------------------------------------->
+
+
+
+
+</center>
+</body>
+</html>

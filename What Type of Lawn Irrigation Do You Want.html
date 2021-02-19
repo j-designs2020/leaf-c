@@ -1,0 +1,194 @@
+<html>
+<head>
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+function storeValues(form)
+{
+sessionStorage.setItem("lawnirig",form.lawnirig.value);
+sessionStorage.setItem("sprinklers",form.sprinklers.value); 
+sessionStorage.setItem("boxes",form.boxes.value); 
+sessionStorage.setItem("timers",form.timers.value);
+validateForm();
+return true;
+}
+
+
+
+function validateForm()
+{
+var rc=true
+
+if 
+(!document.Form.sprinklers.checked &&
+ !document.Form.boxes.checked &&
+!document.Form.timers.checked
+)
+{
+alert("Please check a box to make your selection.")
+rc=false
+}
+
+if (rc) 
+{
+window.location = "Do You Want Any Groundcover.html";
+}
+return rc
+}
+
+</script>
+
+<script type="text/javascript">
+function EntryValue(x) 
+{
+var character=x.substring(0,1);
+var amount=x.charCodeAt(0);
+return amount;
+}
+
+function EntryCheck(y)
+{
+var typedPass=y.value;
+var typedLength=typedPass.length;
+var typedchar=y.value.charAt((typedLength)-1);
+var Numbered=EntryValue(typedchar);
+
+if (Numbered < 48 || Numbered > 57)
+{
+var entered = y.value.substring(0, (typedLength) -6);
+y.value = entered; 
+}
+return false; 
+}
+
+
+
+
+function displayInfo1(elem){
+var sprinklers= ("Sprinklers");
+document.getElementById("irigtxt").innerHTML = sprinklers;
+document.getElementById("irigimg").src = "images/sprinklers.png";			     
+  }
+                       
+
+function displayInfo2(elem){
+var boxes= ("Boxes");
+document.getElementById("irigtxt").innerHTML = boxes;
+document.getElementById("irigimg").src = "images/boxes.png";			     
+  }
+
+
+function displayInfo3(elem){
+var timers= ("Timers");
+document.getElementById("irigtxt").innerHTML = timers;
+document.getElementById("irigimg").src = "images/timers.png";			     
+  }
+              
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What type of lawn irrigation do you want?
+</title>
+</head>
+<body>
+<center> 
+<br> 
+<br>
+<br>
+<img src="images/lawn.png" width="300">
+
+<!----------------------------------END HEADER------------------------------------------>
+
+
+<br> 
+
+
+
+
+<!--------------------------------------FORM--------------------------------------------------> 
+
+<table width="300">
+<td>
+<center>
+<img src="images/gauge47.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What type of lawn irrigation do you want? </b>
+<br>
+<br>
+
+<form name="Form" method="post" action="javascript://" onsubmit="return storeValues(this);">
+<fieldset> <font size="2">
+
+
+Sprinklers
+<span><input type="checkbox" name="sprinklers"></span>  <br> 
+
+<span class="sprayersspace">
+
+Boxes</span> <span>&nbsp; &nbsp;  <img src="images/okspacer.png" width="6"> <input type="checkbox" name="boxes"></span> <br>
+
+<span class="sprayersspace">
+
+Timers</span> <span>&nbsp; <img src="images/okspacer.png" width="10"><input type="checkbox" name="timers"></span> <br>
+
+<fieldset>
+<span> <input type="hidden" name="lawnirig" value="1"> </span>
+</fieldset> 
+
+</p>
+
+<br>
+
+ <center> <span> <input type="image" src="images/ok.png" width="35" value="OK"> </center> </span> </td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+
+</center>
+</body>
+</html>

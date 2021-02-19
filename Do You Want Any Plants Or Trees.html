@@ -1,0 +1,108 @@
+<html>
+<head>
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+
+function storeValues2()
+{
+sessionStorage.setItem("bushshrub",0);
+sessionStorage.setItem("smalltree",0);
+sessionStorage.setItem("largetree",0);
+sessionStorage.setItem("flowers",0);
+sessionStorage.setItem("vines",0);
+sessionStorage.setItem("plantscheck",0);
+return true;
+}
+
+
+
+
+
+</script>
+
+<!----------------------------------END SCRIPTS------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | Do you want any plants or trees? 
+</title>
+</head>
+<body> 
+<center> 
+<br> 
+<br>
+<br>
+<img src="images/plantstrees.png" width="300">
+
+
+<!--------------------------------END HEADER--------------------------------------------->
+
+<br> 
+<br> 
+
+
+
+
+<!--------------------------------------FORM-------------------------------------------------->
+<table width="300">
+<td>
+<center>
+<img src="images/gauge50percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> Do you want any plants or trees? </b>
+<br> <br> <br> <br> 
+ 
+<a href="What Type of Plants Or Trees Do You Want.html">
+<img src="images/yes.png" border="0"></a>  
+
+&nbsp &nbsp &nbsp &nbsp 
+
+<a href="Do You Want Any Lighting.html" onclick="storeValues2()">
+<img src="images/no.png" border="0"></a>
+
+</p>
+
+<!-------------------------------END FORM-------------------------------------------------->
+
+
+
+
+
+
+</center>
+</body>
+</html>

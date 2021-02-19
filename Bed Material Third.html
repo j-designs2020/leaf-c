@@ -1,0 +1,148 @@
+<html>
+<head>
+
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+ 
+<script type="text/javascript">
+
+function storeValues(form)
+{
+sessionStorage.setItem("bedmaterialc",form.bedmaterial.value);
+return true;
+}
+
+function displayInfo(elem){
+            var option = document.getElementById("bedmaterial").value;
+            
+
+	if(option == "Adobe")
+                  {     var adobe= ("Adobe");
+document.getElementById("bedmaterialimg").src = "images/adobebed_info.png";			     
+  }
+                       
+            if(option == "Brick")
+                  {
+    var brick= ("Brick");
+document.getElementById("bedmaterialimg").src = "images/brickbed_info.png";  
+                  }
+
+
+            if(option == "Concrete")
+                  {
+		var cement= ("Concrete");
+document.getElementById("bedmaterialimg").src = "images/cementbed_info.png";
+
+                  }
+
+if(option == "Stone")
+                  {
+		var stone= ("Stone");
+document.getElementById("bedmaterialimg").src = "images/stonebed_info.png";
+                  }
+
+if(option == "Wood")
+                  {
+		var wood= ("Wood");
+document.getElementById("bedmaterialimg").src = "images/woodbed_info.png";
+                  }
+
+        }
+
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What type of material do you want your third style of bed(s) to be made of?
+</title>
+</head>
+<body>
+<center> 
+<br>
+<br>
+<br> 
+<img src="images/plantingbeds.png" width="300">
+<!----------------------------------END HEADER------------------------------------------->
+
+
+<br> 
+
+
+
+<!--------------------------------------FORM--------------------------------------------------> 
+
+
+<table width="300">
+<td>
+<center>
+<img src="images/gauge87.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What material do you want your third style of bed(s) to be made of? </b>
+<br> 
+<br> 
+<form name="bedmaterial"  method="post" action="How Many Third Beds Do You Want.html" onsubmit="return storeValues(this);">
+<br>  
+<fieldset>
+<select name="bedmaterial" id="bedmaterial" onchange="displayInfo(this)">
+<option value="Adobe" selected> Adobe </option>
+<option value="Brick"> Brick</option>
+<option value="Concrete"> Concrete </option>
+<option value="Stone"> Stone </option>
+<option value="Wood"> Wood </option>
+</select>     
+</p>
+<br> 
+<br>
+
+
+<span> <center> <input type="image" src="images/ok.png" width="35" value="OK" margin-left="2em"> </center> </span> 
+
+</td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+</center>
+</body>
+</html>

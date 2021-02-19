@@ -1,0 +1,107 @@
+<html>
+<head>
+
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style>
+
+fieldset
+{
+border:none; margin:0; padding:0;
+}
+
+html
+{
+background: #4788ff;
+}
+
+</style>
+
+
+<!---------------------------------END CSS--------------------------------------------------->
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+ 
+<script type="text/javascript">
+
+function getCookie(name)
+{var re=new RegExp(name+"=([^;]+)");var value=re.exec(document.cookie);return(value!=null)?unescape(value[1]):0;}
+function getCookie(name){var re=new RegExp(name+"=([^;]+)");var value=re.exec(document.cookie);return(value!=null)?unescape(value[1]):null;}
+var today=new Date();var expiry=new Date(today.getTime()+30*24*3600*1000);var expired=new Date(today.getTime()-24*3600*1000);function setCookie(name,value){document.cookie=name+"="+escape(value)+"; path=/; expires="+expiry.toGMTString();}
+function deleteCookie(name){document.cookie=name+"=null; path=/; expires="+expired.toGMTString();}
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | Your estimate has been saved.
+</title>
+</head>
+<body>
+<center> 
+<br> 
+<br> 
+<br> 
+
+<img src="images/opening.png" width="300">
+<!----------------------------------END HEADER------------------------------------------->
+
+
+<br> 
+<br>
+<br> 
+<br> 
+<br> 
+<br>
+
+<!--------------------------------------FORM--------------------------------------------------> 
+<table width="300">
+<td>
+<center>
+Your estimate has been saved. Start again whenever you'd like.
+
+<br> <br> <br> <br> <br> <br>
+<script type="text/javascript">
+
+var issavedsummary;
+issavedsummary=(getCookie("savedsummary"));
+if (issavedsummary>0)
+{ 
+var str= "<b>RETURN TO YOUR ESTIMATE</b>";document.write(str.link("Summary.html"));
+}
+else
+{
+}
+
+</script>
+
+ 
+
+
+
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+<p>
+<center> 
+
+<br> 
+<br>
+<br> 
+<br>
+<br>
+
+
+
+
+</center>
+</body>
+</html>

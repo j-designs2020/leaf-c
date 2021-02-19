@@ -1,0 +1,257 @@
+<html>
+<head>
+ 
+
+<!--------------------------------------CSS----------------------------------------------------->
+
+<style>
+
+fieldset
+{
+border:none; margin:0; padding:0;
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+<!-------------------------------SCRIPTS----------------------------------------------------->
+
+<script type="text/javascript">
+
+function savedProceed()
+{
+var issavedsummary;
+issavedsummary=(sessionStorage.getItem("savedsummary"));
+sessionStorage.setItem("state",0);
+sessionStorage.setItem("walkwidth",0);
+sessionStorage.setItem("walklength",0);
+sessionStorage.setItem("lawnirig",0);
+sessionStorage.setItem("bark",0); 
+sessionStorage.setItem("rocks",0); 
+sessionStorage.setItem("sand",0);
+sessionStorage.setItem("barkarea",0); 
+sessionStorage.setItem("rocksarea",0); 
+sessionStorage.setItem("sandarea",0);
+sessionStorage.setItem("groundcover",0);
+sessionStorage.setItem("bedwidth",0);
+sessionStorage.setItem("bedlength",0);
+sessionStorage.setItem("beddepth",0);
+sessionStorage.setItem("bedmaterial",0);
+sessionStorage.setItem("howmanybeds",0);
+sessionStorage.setItem("bedwidthb",0);
+sessionStorage.setItem("bedlengthb",0);
+sessionStorage.setItem("beddepthb",0);
+sessionStorage.setItem("bedmaterialb",0);
+sessionStorage.setItem("howmanybedsb",0);
+sessionStorage.setItem("bedwidthc",0);
+sessionStorage.setItem("bedlengthc",0);
+sessionStorage.setItem("beddepthc",0);
+sessionStorage.setItem("bedmaterialc",0);
+sessionStorage.setItem("howmanybedsc",0);
+sessionStorage.setItem("walkwaymaterial",0);
+sessionStorage.setItem("lawnsize",0);
+sessionStorage.setItem("lawnsod",0);
+sessionStorage.setItem("bushshrub",0);
+sessionStorage.setItem("smalltree",0);
+sessionStorage.setItem("largetree",0);
+sessionStorage.setItem("flowers",0);
+sessionStorage.setItem("vines",0);
+sessionStorage.setItem("groundcoverlights",0);
+sessionStorage.setItem("pondlength",0);
+sessionStorage.setItem("pondwidth",0);
+sessionStorage.setItem("ponddepth",0);
+sessionStorage.setItem("fallwidth",0);
+sessionStorage.setItem("falllength",0);
+sessionStorage.setItem("sprinklers",0); 
+sessionStorage.setItem("boxes",0); 
+sessionStorage.setItem("timers",0);
+sessionStorage.setItem("howmanyponds",0);
+sessionStorage.setItem("howmanyfalls",0);
+sessionStorage.setItem("plantscheck",0);
+sessionStorage.setItem("watercheck",0);
+sessionStorage.setItem("watercheck2",0);
+sessionStorage.setItem("lightscheck",0);
+sessionStorage.setItem("gradecond",0);
+sessionStorage.setItem("savedsummary",0);
+
+if (issavedsummary>0)
+{ 
+var answer;
+answer=confirm("This will erase your previously saved estimate, proceed?");
+if (answer) 
+{ 
+sessionStorage.setItem("state",0);
+sessionStorage.setItem("walkwidth",0);
+sessionStorage.setItem("walklength",0);
+sessionStorage.setItem("lawnirig",0);
+sessionStorage.setItem("bark",0); 
+sessionStorage.setItem("rocks",0); 
+sessionStorage.setItem("sand",0);
+sessionStorage.setItem("barkarea",0); 
+sessionStorage.setItem("rocksarea",0); 
+sessionStorage.setItem("sandarea",0);
+sessionStorage.setItem("groundcover",0);
+sessionStorage.setItem("bedwidth",0);
+sessionStorage.setItem("bedlength",0);
+sessionStorage.setItem("beddepth",0);
+sessionStorage.setItem("bedmaterial",0);
+sessionStorage.setItem("howmanybeds",0);
+sessionStorage.setItem("bedwidthb",0);
+sessionStorage.setItem("bedlengthb",0);
+sessionStorage.setItem("beddepthb",0);
+sessionStorage.setItem("bedmaterialb",0);
+sessionStorage.setItem("howmanybedsb",0);
+sessionStorage.setItem("bedwidthc",0);
+sessionStorage.setItem("bedlengthc",0);
+sessionStorage.setItem("beddepthc",0);
+sessionStorage.setItem("bedmaterialc",0);
+sessionStorage.setItem("howmanybedsc",0);
+sessionStorage.setItem("walkwaymaterial",0);
+sessionStorage.setItem("lawnsize",0);
+sessionStorage.setItem("lawnsod",0);
+sessionStorage.setItem("bushshrub",0);
+sessionStorage.setItem("smalltree",0);
+sessionStorage.setItem("largetree",0);
+sessionStorage.setItem("flowers",0);
+sessionStorage.setItem("vines",0);
+sessionStorage.setItem("groundcoverlights",0);
+sessionStorage.setItem("pondlength",0);
+sessionStorage.setItem("pondwidth",0);
+sessionStorage.setItem("ponddepth",0);
+sessionStorage.setItem("fallwidth",0);
+sessionStorage.setItem("falllength",0);
+sessionStorage.setItem("sprinklers",0); 
+sessionStorage.setItem("boxes",0); 
+sessionStorage.setItem("timers",0);
+sessionStorage.setItem("howmanyponds",0);
+sessionStorage.setItem("howmanyfalls",0);
+sessionStorage.setItem("plantscheck",0);
+sessionStorage.setItem("watercheck",0);
+sessionStorage.setItem("watercheck2",0);
+sessionStorage.setItem("lightscheck",0);
+sessionStorage.setItem("gradecond",0);
+sessionStorage.setItem("savedsummary",0);
+window.location="Do You Want A Lawn.html"; 
+}
+else
+{
+}
+}
+else
+{ window.location="Do You Want A Lawn.html"; 
+}
+
+
+
+}
+
+
+</script> 
+
+<script type="text/javascript">
+    localStorage.setItem("lastname",0);
+</script>
+<!--------------------------------END SCRIPTS-------------------------------------------->
+
+
+<!-------------------------------HEADER----------------------------------------------------->
+<title>
+Landscaping Estimator
+</title>
+</head>
+<body vlink="green"> 
+<font face="calibri">
+<center> 
+
+<br> 
+<br>
+<br>
+
+
+<img src="images/opening.png" width="300">
+
+<br> 
+<br> 
+<br>
+<br>
+<table width="300"> <td> <center>
+<b>Welcome to LEAF-C, the Landscaping Estimator App for Customers.</b> 
+
+<br> 
+<br> 
+
+<i>Get an idea what your vision will cost in just minutes!</i>
+
+<!------------------------------END HEADER---------------------------------------------->
+
+
+
+<!-------------------------------FORM--------------------------------------------------------> 
+</p>
+<br> 
+<br> 
+
+
+<span> <center> <input type="image" src="images/ok.png" width="35" value="OK" margin-left="2em" onclick="savedProceed();"> </center> </span>
+
+
+
+
+
+
+<br> 
+<br> 
+
+
+
+<!------------------------------END FORM--------------------------------------------------->
+
+
+<center>
+<script type="text/javascript">
+
+var issavedsummary;
+issavedsummary=(sessionStorage.getItem("savedsummary"));
+if (issavedsummary>0)
+{ 
+var str= "<b>VIEW YOUR SAVED ESTIMATE</b>";document.write(str.link("Summary.html"));
+}
+else
+{
+}
+
+
+</script>
+
+<!----------------------------------FOOTER--------------------------------------------------->
+
+<font size="1"> 
+<center> 
+<br> <br> <br> <br>
+
+
+</table>
+</center>
+</font> 
+
+<!----------------------------------END FOOTER------------------------------------------->
+
+
+</body>
+</html>

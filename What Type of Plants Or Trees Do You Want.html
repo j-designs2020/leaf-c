@@ -1,0 +1,304 @@
+<html>
+<head>
+
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+
+<script type="text/javascript">
+
+
+
+function storeValues(form)
+{
+sessionStorage.setItem("bushshrub",form.bushshrub.value);
+sessionStorage.setItem("smalltree",form.smalltree.value);
+sessionStorage.setItem("largetree",form.largetree.value);
+sessionStorage.setItem("flowers",form.flowers.value);
+sessionStorage.setItem("vines",form.vines.value);
+sessionStorage.setItem("plantscheck",form.plantscheck.value);
+validateForm();
+return true;
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+function EntryValue(x) 
+{
+var character=x.substring(0,1);
+var amount=x.charCodeAt(0);
+return amount;
+}
+
+function EntryCheck(y)
+{
+var typedPass=y.value;
+var typedLength=typedPass.length;
+var typedchar=y.value.charAt((typedLength)-1);
+var Numbered=EntryValue(typedchar);
+
+if (Numbered < 48 || Numbered > 57)
+{
+var entered = y.value.substring(0, (typedLength) -1);
+y.value = entered; 
+}
+return false; 
+}
+
+
+
+function validateForm()
+{
+var rc=true
+
+if 
+(
+!document.Form.bushshrubcheck.checked &&
+ !document.Form.smalltreecheck.checked &&
+!document.Form.largetreecheck.checked &&
+!document.Form.flowerscheck.checked &&
+ !document.Form.vinescheck.checked &&
+ document.Form.bushshrub.value==0 &&
+ document.Form.smalltree.value==0 &&
+ document.Form.largetree.value==0 &&
+ document.Form.flowers.value==0 &&
+ document.Form.vines.value==0 
+)
+{
+alert("Please check a box to make your selection and enter the amount you'd like.")
+rc=false
+}
+
+
+
+if (document.Form.bushshrub.value>0)
+{
+if (!document.Form.bushshrubcheck.checked) 
+{
+alert("Please check to indicate you'd like bushes or shrubs.")
+rc=false
+}
+}
+
+if (document.Form.bushshrubcheck.checked) 
+{
+if (document.Form.bushshrub.value==0)
+{
+alert("Please enter the amount of bushes or shrubs you'd like.")
+rc=false
+}
+}
+
+
+if (document.Form.smalltree.value>0)
+{
+if (!document.Form.smalltreecheck.checked) 
+{
+alert("Please check to indicate you'd like small trees.")
+rc=false
+}
+}
+
+if (document.Form.smalltreecheck.checked) 
+{
+if (document.Form.smalltree.value==0)
+{
+alert("Please enter the amount of small trees you'd like.")
+rc=false
+}
+}
+
+
+
+if (document.Form.largetree.value>0)
+{
+if (!document.Form.largetreecheck.checked) 
+{
+alert("Please check to indicate you'd like large trees.")
+rc=false
+}
+}
+
+if (document.Form.largetreecheck.checked) 
+{
+if (document.Form.largetree.value==0)
+{
+alert("Please enter the amount of large trees you'd like.")
+rc=false
+}
+}
+
+
+if (document.Form.flowers.value>0)
+{
+if (!document.Form.flowerscheck.checked) 
+{
+alert("Please check to indicate you'd like flowers.")
+rc=false
+}
+}
+
+
+if (
+document.Form.flowerscheck.checked) 
+{
+if (document.Form.flowers.value==0)
+{
+alert("Please enter the amount of flowers you'd like.")
+rc=false
+}
+}
+
+
+
+if (document.Form.vines.value>0)
+{
+if (!document.Form.vinescheck.checked) 
+{
+alert("Please check to indicate you'd like vines.")
+rc=false
+}
+}
+
+if (
+document.Form.vinescheck.checked) 
+{
+if (document.Form.vines.value==0)
+{
+alert("Please enter the amount of vines you'd like.")
+rc=false
+}
+}
+
+if (rc) 
+{
+window.location = "Do You Want Any Lighting.html";
+}
+return rc
+}
+
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What type of plants or trees do you want?
+</title>
+</head>
+<body>
+<center> 
+<br> 
+<br>
+<br>
+<img src="images/plantstrees.png" width="300">
+
+<!----------------------------------END HEADER------------------------------------------>
+
+
+<br> 
+
+
+
+<!--------------------------------------FORM--------------------------------------------------> 
+
+<table width="300">
+<td>
+<center>
+<img src="images/gauge50percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What type of plants or trees do you want? </b>
+<br>
+<br>
+<form name="Form" method="post" action="javascript://" onsubmit="return storeValues(this);">
+<fieldset> <font size="2">
+
+
+
+<label> Bushes/Shrubs</label> <img src="images/okspacer.png" width="2">
+<span><input type="checkbox" name="bushshrubcheck"></span>  
+<span><input type="text" name="bushshrub" value="" size="4" maxlength="4" id="valuetext1" onKeyUp="javascript:EntryCheck(Form.valuetext1);"> </span>  <br>
+
+
+<label> Small Trees</label> <img src="images/okspacer.png" width="20">
+<span><input type="checkbox" name="smalltreecheck"></span>  
+<span><input type="text" name="smalltree" size="4" maxlength="4" value="" id="valuetext2" onKeyUp="javascript:EntryCheck(Form.valuetext2);"></span>   <br> 
+
+
+
+
+<label> Large Trees</label> <img src="images/okspacer.png" width="20">
+<span><input type="checkbox" name="largetreecheck"></span>  
+<span><input type="text" name="largetree" size="4" maxlength="4" value="" id="valuetext3" onKeyUp="javascript:EntryCheck(Form.valuetext3);"></span>   <br>  
+
+
+
+
+<label><span class="sprayersspace"> Flowers</label> <img src="images/okspacer.png" width="38">
+<span><input type="checkbox" name="flowerscheck">
+<input type="text" name="flowers" size="4" maxlength="4" value="" id="valuetext4" onKeyUp="javascript:EntryCheck(Form.valuetext4);"></span>   <br> 
+
+
+
+<label><span class="sprayersspace2"> Vines</label> <img src="images/okspacer.png" width="51">
+<span><input type="checkbox" name="vinescheck"></span>  
+<span><input type="text" name="vines" size="4" maxlength="4" value="" id="valuetext5" onKeyUp="javascript:EntryCheck(Form.valuetext5);"></span>  
+
+ <span> <input type="hidden" name="plantscheck" value="1"> </span>
+
+<br>
+<br>
+<br>
+
+<input type="image" src="images/ok.png" width="35" value="OK" margin-left="2em"> </center> </span>  </tr> </td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+
+</center>
+</body>
+</html>

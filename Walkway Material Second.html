@@ -1,0 +1,112 @@
+<html>
+<head>
+
+
+<!----------------------------------------CSS--------------------------------------------------->
+
+<style type="text/css">
+
+fieldset
+{
+border:none
+}
+
+html
+{
+background: #4788ff;
+}
+
+.pos1{
+    position:fixed;
+    top:10px;
+    left:26%;
+	width: 11%;
+}
+
+
+
+</style>
+
+<!---------------------------------END CSS--------------------------------------------------->
+<img src="images/logo.png" class="pos1"/>
+
+<!----------------------------------SCRIPTS-------------------------------------------------->
+ 
+<script type="text/javascript">
+
+
+function storeValues(form)
+{
+sessionStorage.setItem("walkwaymaterialb",form.walkwaymaterial.value);
+return true;
+}
+
+
+
+
+</script>
+
+<!--------------------------------END SCRIPTS--------------------------------------------->
+
+
+<!-----------------------------------HEADER-------------------------------------------------->
+
+<title>
+Landscaping Estimator | What type of material do you want your second walkway to be made of?
+</title>
+</head>
+<body>
+<center> 
+<br> 
+<br>
+<br>
+<img src="images/walkways.png" width="300">
+
+
+<!----------------------------------END HEADER------------------------------------------->
+
+
+<br> 
+
+
+
+<!--------------------------------------FORM--------------------------------------------------> 
+<table width="300">
+<td>
+<center>
+<img src="images/gauge12.5percent.png" width="250">
+<br>
+<br>
+<br>
+<font face="calibri" size="2"> <b> What material do you want your second walkway  to be made of? </b>
+<form name="walkway"  method="post" action="Do You Want A Third Walkway.html" onsubmit="return storeValues(this);">
+<br>  
+<fieldset>
+<select name="walkwaymaterial">
+<option value="Concrete"> Concrete</option>
+<option value="Granite"> Granite </option>
+<option value="Gravel"> Gravel </option>
+<option value="Sand"> Sand </option>
+<option value="Stone"> Stone </option>
+<option value="Rock"> Rock </option>
+</select>     
+</p>
+<br> 
+<br> 
+<br>
+<span> <center> <input type="image" src="images/ok.png" width="35" value="OK"> </center> </span> 
+
+</td>
+</p>
+</fieldset>
+</form>
+</table>
+
+<!----------------------------------END FORM----------------------------------------------->
+
+
+
+
+</center>
+</body>
+</html>
